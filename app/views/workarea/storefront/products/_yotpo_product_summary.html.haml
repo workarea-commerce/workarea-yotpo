@@ -1,0 +1,2 @@
+- if Workarea::Yotpo.app_key.present? && Workarea.config.yotpo.show_review_summary_on_pdp
+  .yotpo.bottomLine{"data-product-id" => "#{product.id}", "data-url" => "#{product_url(product)}"}

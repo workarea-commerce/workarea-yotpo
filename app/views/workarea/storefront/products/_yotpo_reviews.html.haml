@@ -1,0 +1,2 @@
+- if Workarea::Yotpo.app_key.present?
+  .yotpo.yotpo-main-widget{"data-currency" => "#{product.sell_min_price.currency}", "data-image-url" => "#{product_image_url(product.primary_image, :small)}", "data-name" => "#{product.name}", "data-price" => "#{product.pricing.sell_min_price}", "data-product-id" => "#{product.id}", "data-url" => "#{product_url(product)}" }

@@ -1,0 +1,7 @@
+- if Workarea::Yotpo.app_key.present?
+  :javascript
+    (function e(){var e=document.createElement("script");e.type="text/javascript",e.async=true,e.src="//staticw2.yotpo.com/#{Workarea::Yotpo.app_key}/widget.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})();
+  :javascript
+    yotpoTrackConversionData = {orderId: "#{@order.id}", orderAmount: "#{@order.total_price}", orderCurrency: "#{@order.total_price.currency.iso_code}"}
+  %noscript
+    %img{:height => "1", :src => "//api.yotpo.com/conversion_tracking.gif?app_key=#{Workarea::Yotpo.app_key}&order_id=#{@order.id}&order_amount=#{@order.total_price}&order_currency=#{@order.total_price.currency.iso_code}", :width => "1"}/

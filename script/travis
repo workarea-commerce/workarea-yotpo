@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+bundle exec rake workarea:services:up
+sleep 10 # to let Elasticsearch prepare itself
+
+eval $TEST_COMMAND
