@@ -1,7 +1,6 @@
 module Workarea
   module Yotpo
     class BogusGateway
-
       attr_reader :options
 
       def initialize(options = {})
