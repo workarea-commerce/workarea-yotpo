@@ -43,6 +43,7 @@ task :release do
   system 'git push --tags'
 
   system "gem build workarea-yotpo.gemspec"
+  system "gem push workarea-yotpo-#{Workarea::Yotpo::VERSION}.gem"
   system "gem push workarea-yotpo-#{Workarea::Yotpo::VERSION}.gem --host #{host}"
   system "rm workarea-yotpo-#{Workarea::Yotpo::VERSION}.gem"
 end
